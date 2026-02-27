@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://KevinYu3214.github.io/Luke-16-Creative-Interpretation",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
