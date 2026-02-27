@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: "DM Sans", "Avenir Next", "Avenir", "Segoe UI", sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.18);
+}
+
+.token {
+  border-radius: 6px;
+  padding: 0 2px;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.token.is-highlight {
+  background: rgba(224, 122, 31, 0.18);
+  color: #7c2d12;
+}
+
+.token:focus-visible {
+  outline: 2px solid #e07a1f;
+  outline-offset: 2px;
+}
+
+svg [role="button"]:focus {
+  outline: none;
+  stroke: #e07a1f;
+  stroke-width: 3px;
+}
+
+.verse-active {
+  border-color: rgba(224, 122, 31, 0.35);
+}
+
+.pulse {
+  outline: 1px solid rgba(224, 122, 31, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    outline: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #print-view,
+  #print-view * {
+    visibility: visible !important;
+  }
+
+  #print-view {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-height: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
